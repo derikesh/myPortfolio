@@ -1,11 +1,15 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import {  Geist_Mono ,Space_Grotesk} from "next/font/google";
 import "./globals.css";
 
-import { ThemeProvider } from "next-themes";
-import LenisWrapper from "./components/LenisWraper";
+import { ClashGrotesk } from "./assets/fonts/localFont";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+import { ThemeProvider } from "next-themes";
+import LenisWrapper from "./components/Lenis/LenisWraper";
+
+import Navbar from "./components/Navbar/Navbar";
+
+const grotesk = Space_Grotesk({
+  variable: "--font-grotesk-sans",
   subsets: ["latin"],
 });
 
@@ -23,10 +27,11 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${grotesk.variable} ${geistMono.variable} ${ClashGrotesk.variable} antialiased`}
       >
         <ThemeProvider attribute={'class'} defaultTheme="light" enableSystem >
           <LenisWrapper>
+            <Navbar/>
             {children}
           </LenisWrapper>
         </ThemeProvider>

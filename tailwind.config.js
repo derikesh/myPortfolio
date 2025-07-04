@@ -7,7 +7,12 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily:{
+        clash: ['var(--font-clash)', 'sans-serif'], // External font
+        grotesk: ['var(--font-grotesk-sans)', 'sans-serif'], // Next.js font - ADD THIS
+      }
+    },
   },
   plugins: [],
 }

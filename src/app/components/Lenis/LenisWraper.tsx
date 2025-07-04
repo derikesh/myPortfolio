@@ -1,6 +1,6 @@
 'use client';
 
-import useLenis from "../hooks/lenisHook"
+import useLenis from "../../hooks/lenisHook"
 
 const LenisWrapper = ({ children }: { children: React.ReactNode }) => {
 
