@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function SubMenu( {clicked}:{clicked:boolean} ) {
+const SubMenu =  React.memo( ( {clicked}:{clicked:boolean} ) => {
   return (
     <div>
-             <div className={`hidden_menu bg-black transition-all duration-700 ease-in-out ${clicked ? 'md:h-[70vh] h-[90vh]' : 'h-0'} absolute top-0 left-0 w-full overflow-hidden`}>
+             <div className={`hidden_menu bg-black transition-transform duration-700 ease-in-out md:h-[70vh] h-[90vh] ${clicked ? 'translate-y-0' : '-translate-y-full'} absolute top-0 left-0 w-full overflow-hidden`}>
 
               <div className={`home_layout flex md:flex-row flex-col-reverse h-full justify-center transition-opacity duration-200 ${clicked ? 'opacity-100 delay-300' : 'opacity-0'}`}>
                 
@@ -32,4 +32,7 @@ export default function SubMenu( {clicked}:{clicked:boolean} ) {
             </div>
     </div>
   )
-}
+});
+
+SubMenu.displayName = "SubMenu";
+export default SubMenu;

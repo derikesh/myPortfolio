@@ -2,7 +2,6 @@
 
 import SvgIcon from "@/app/assets/logo/Logo";
 import { useState } from "react";
-import { FiPlus, FiMinus } from "react-icons/fi";
 import AnimatedMenuIcon from "./PlusIcon";
 
 import SubMenu from "./SubMenu";
@@ -25,9 +24,9 @@ const Navbar = () => {
 
               <div className="flex flex-col gap-4 items-start ">
                 
-                <div className={`relative ml-auto transition-all ease-out duration-500 ${ clicked ? 'bottom-12 delay-300 ' : '-bottom-5' }`}>Menu</div>
+                <div className={`relative ml-auto transition-all ease-out duration-500 ${clicked ? '-translate-y-12 delay-300' : 'translate-y-5'}`}>Menu</div>
 
-                <div className={`relative transition-all ease-out duration-500 ${ clicked ? 'bottom-5 delay-300 ' : '-bottom-8' }`}>
+                <div className={`relative transition-all ease-out duration-500 ${ clicked ? '-translate-y-5 delay-300 ' : 'translate-y-5' }`}>
                     <div className="flex gap-4 " >
                         <a href="https://www.instagram.com" className="sm:block hidden" >Instagram</a>
                         <a href="https://www.linkedin.com" className="sm:block hidden" >LinkedIn</a>
