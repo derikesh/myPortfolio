@@ -1,7 +1,8 @@
-import {  Geist_Mono ,Space_Grotesk} from "next/font/google";
+import {  Geist_Mono ,Space_Grotesk  } from "next/font/google";
 import "./globals.css";
 
 import { ClashGrotesk } from "./assets/fonts/localFont";
+
 
 import { ThemeProvider } from "next-themes";
 import LenisWrapper from "./components/Lenis/LenisWraper";
