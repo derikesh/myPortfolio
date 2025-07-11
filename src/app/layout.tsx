@@ -8,6 +8,7 @@ import { ThemeProvider } from "next-themes";
 import LenisWrapper from "./components/Lenis/LenisWraper";
 
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 const grotesk = Space_Grotesk({
   variable: "--font-grotesk-sans",
@@ -40,6 +41,7 @@ export default function RootLayout({
           <LenisWrapper>
             <Navbar/>
             {children}
+            <Footer/>
           </LenisWrapper>
         </ThemeProvider>
       </body>

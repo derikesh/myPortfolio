@@ -10,7 +10,7 @@ interface WorkTopContentProps {
 const WorkTopContent: React.FC<WorkTopContentProps> = ({ isHovered }) => {
   return (
     <div
-      className={`first_content h-[100%] ${isHovered ? 'md:bg-black/50' : ''} relative transition-transform duration-300 ease-in-out z-20 ${
+      className={`first_content h-[100%] ${isHovered ? 'md:bg-black/50' : ''} relative transition-transform duration-300 delay-75 ease-in-out z-20 ${
         isHovered ? '-translate-y-[15%]' : ''
       }`}
     >

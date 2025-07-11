@@ -45,8 +45,8 @@ export default function SingleWorkCard({customeClass}:SINGLE_INTERFACE) {
        <WorkTopContent isHovered={isHovered || isResponsive} /> 
 
       <div
-        className={`absolute top-0 h-[100%] flex flex-col justify-end items-end z-10 w-full transition-transform duration-300 ease-in-out ${
-          (isHovered || isResponsive) ? 'md:translate-y-0 translate-y-12 opacity-100' : 'translate-y-28 opacity-0'
+        className={`absolute top-0 h-[100%] flex flex-col justify-end items-end z-10 w-full transition-transform duration-300 ease-in-out delay-75 ${
+          (isHovered || isResponsive) ? 'md:translate-y-0 translate-y-12 ' : 'translate-y-28 '
         }`}
       >
         <h2 className="md:hidden block text-black md:text-[3vw] text-[5vw] bg-white pt-4 w-full text-center font-bold">Gamit</h2>
