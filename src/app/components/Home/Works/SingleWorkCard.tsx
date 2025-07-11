@@ -1,9 +1,11 @@
 'use client'
 
 import React, { useState } from 'react'
-
 import img from '../../../assets/images/dump/Simba-1-1256x785.webp';
 import Image from 'next/image';
+
+import WorkTopContent from './WorkTopContent';
+import useResponsive from '@/app/hooks/useResponsive';
 
 interface SINGLE_INTERFACE {
     customeClass:any
@@ -11,10 +13,11 @@ interface SINGLE_INTERFACE {
 
 export default function SingleWorkCard({customeClass}:SINGLE_INTERFACE) {
   const [isHovered, setIsHovered] = useState(false);
+  const isResponsive = useResponsive(762); // Check if the device width is <= 640px
 
   return (
     <div
-      className={`${customeClass}`}
+      className={`${customeClass} cursor-pointer`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -28,25 +31,26 @@ export default function SingleWorkCard({customeClass}:SINGLE_INTERFACE) {
             />
         </div>
 
-        <div
-        className={`first_content h-[100%] ${isHovered ? 'bg-purple-700/35' : ''} relative transition-transform duration-300 ease-in-out ${
-          isHovered ? '-translate-y-16' : ''
-        }`}
-        >
-            <div className="absolute bottom-8 w-full">
-            <div className="flex flex-row px-4 justify-between relative ">
-            <div className="bg-white text-black">SS</div>
-            <div className="bg-white text-black">SS</div>
-            </div>
-            </div>
-        </div>
+          {/* hidden heading */}
+         {
+          !isResponsive && (
+             <div className={`absolute inset-32 flex items-center z-30 justify-center transition-opacity duration-300 ${ (isHovered || isResponsive) ? 'opacity-100' : 'opacity-0'}`}>
+              <h2 className="text-white md:text-[3vw] text-[5vw] font-bold">Gamit</h2>
+         </div>
+          )
+         }
+
+
+      {/* all visible content */}
+       <WorkTopContent isHovered={isHovered || isResponsive} /> 
 
       <div
-        className={`absolute top-0 h-[100%] flex justify-end items-end z-10 w-full transition-transform duration-300 ease-in-out ${
-          isHovered ? '-translate-y-0' : 'translate-y-28'
+        className={`absolute top-0 h-[100%] flex flex-col justify-end items-end z-10 w-full transition-transform duration-300 ease-in-out ${
+          (isHovered || isResponsive) ? 'md:translate-y-0 translate-y-12 opacity-100' : 'translate-y-28 opacity-0'
         }`}
       >
-        <p className="relative w-full text-center h-fit py-4 text-[1.2vw] text-black bg-yellow-400 ">Two velodromes, one seamless execution</p>
+        <h2 className="md:hidden block text-black md:text-[3vw] text-[5vw] bg-white pt-4 w-full text-center font-bold">Gamit</h2>
+        <p className="relative w-full text-center h-[15%] py-4  md:text-[1.2vw] text-[3vw] text-black bg-white ">Two velodromes, one seamless execution</p>
       </div>
 
     </div>

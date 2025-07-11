@@ -20,7 +20,7 @@ const AboutSection = () => {
       </div>
       <div className="home_layout bg-[#252525] mx-auto px-6 py-32 relative z-10">
         <SectionTitle  color="white" title="ABOUT ME"   />
-       <div className="about_me text-[1.3vw] flex flex-col gap-12 text-center items-center font-grotesk text-white mx-auto leading-relaxed my-[3.5vw]" >
+       <div className="about_me md:text-[2vw] text-[4.6vw] flex flex-col gap-[6vw] md:gap-[2vw] text-center items-center font-grotesk text-white mx-auto leading-relaxed my-[16vw] md:my-[3.5vw]" >
            <p>
           My name is Rikesh. I’m a frontend software developer with roots in
           system thinking and user interaction. I’m passionate about music,
@@ -38,11 +38,11 @@ const AboutSection = () => {
           self-learning journey
         </p>
        </div>
-       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button className="bg-white text-black px-8 py-4 rounded-full font-medium hover:bg-gray-100 transition-colors">
+       <div className="flex flex-col sm:flex-row gap-[1.5vw] justify-center">
+          <button className="bg-white text-black px-[2vw] py-[1vw] rounded-full font-medium hover:bg-gray-100 transition-colors">
             Learn More
           </button>
-          <button className="border border-white text-white px-8 py-4 rounded-full font-medium hover:bg-white hover:text-black transition-colors">
+          <button className="border border-white text-white px-[2vw] py-[1vw] rounded-full font-medium hover:bg-white hover:text-black transition-colors">
             Contact Me
           </button>
        </div>

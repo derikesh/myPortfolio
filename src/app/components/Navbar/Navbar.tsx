@@ -11,7 +11,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="home_layout sticky top-0 z-20">
+      <div className="home_layout sticky top-0 z-40">
         {/* differern component */}
         <SubMenu clicked={clicked} />
 
