@@ -1,4 +1,4 @@
-import {  Geist_Mono ,Space_Grotesk  } from "next/font/google";
+import {  Geist_Mono ,Space_Grotesk , Karantina  } from "next/font/google";
 import "./globals.css";
 
 import { ClashGrotesk } from "./assets/fonts/localFont";
@@ -14,6 +14,12 @@ const grotesk = Space_Grotesk({
   subsets: ["latin"],
 });
 
+const karantin = Karantina({
+  variable:"--font-karantina-sans",
+  subsets:['latin'],
+  weight:['300','400','700']
+})
+
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
@@ -28,7 +34,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <body
-        className={`${grotesk.variable} ${geistMono.variable} ${ClashGrotesk.variable} antialiased`}
+        className={`${karantin.variable} ${grotesk.variable} ${geistMono.variable} ${ClashGrotesk.variable} antialiased`}
       >
         <ThemeProvider attribute={'class'} defaultTheme="light" enableSystem >
           <LenisWrapper>

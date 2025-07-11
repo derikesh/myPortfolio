@@ -11,6 +11,7 @@ module.exports = {
       fontFamily:{
         clash: ['var(--font-clash)', 'sans-serif'], // External font
         grotesk: ['var(--font-grotesk-sans)', 'sans-serif'], // Next.js font - ADD THIS
+        karantina:['var(--font-karantina-sans)','sans-serif']
       }
     },
   },
