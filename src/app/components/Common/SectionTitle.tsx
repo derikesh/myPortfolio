@@ -7,7 +7,7 @@ type SectionTitleProps = {
 
 const SectionTitle: React.FC<SectionTitleProps> = ({ title , color }) => {
   return (
-    <h2 className={`text-4xl lg:text-[3vw] text-[5vw] font-karantina font-bold text-center text-${color ? color : 'black'}`}>
+    <h2 className={`lg:text-[3vw] text-[10vw] font-karantina font-bold text-center text-${color ? color : 'black'}`}>
       {title}
     </h2>
   );

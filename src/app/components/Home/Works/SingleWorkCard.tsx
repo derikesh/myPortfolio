@@ -49,8 +49,8 @@ export default function SingleWorkCard({customeClass}:SINGLE_INTERFACE) {
           (isHovered || isResponsive) ? 'md:translate-y-0 translate-y-12 ' : 'translate-y-28 '
         }`}
       >
-        <h2 className="md:hidden block text-black md:text-[3vw] text-[5vw] bg-white pt-4 w-full text-center font-bold">Gamit</h2>
-        <p className="relative w-full text-center h-[15%] py-4  md:text-[1.2vw] text-[3vw] text-black bg-white ">Two velodromes, one seamless execution</p>
+        <h2 className="md:hidden block text-black md:text-[3vw] text-[5.6vw] bg-white pt-4 w-full text-center font-bold">Gamit</h2>
+        <p className="relative w-full text-center h-[15%] py-4  md:text-[1.2vw] text-[3.6vw] text-black bg-white ">Two velodromes, one seamless execution</p>
       </div>
 
     </div>
