@@ -17,20 +17,20 @@ export default function Footer() {
         <div className='text_content flex flex-col gap-6 md:pl-[12vw]'>
           <div>
             <h3 className='font-bold text-[3.8vw] lg:text-[1vw] md:text-[1.8vw]'>Address</h3>
-            <p className='text-[3vw] lg:text-[0.7vw] md:text-[1vw] font-thin'>Jytha, Kathmandu</p>
+            <p className='text-[3vw] lg:text-[0.9vw] md:text-[1vw] font-thin'>Jytha, Kathmandu</p>
           </div>
           <div>
             <h3 className='font-bold text-[3.8vw] lg:text-[1vw] md:text-[1.8vw]'>Contact</h3>
-            <p className='text-[3vw] lg:text-[0.7vw] md:text-[1vw] font-thin'>Email: demo@example.com</p>
+            <p className='text-[3vw] lg:text-[0.9vw] md:text-[1vw] font-thin'>Email: demo@example.com</p>
           </div>
           <div>
             <h3 className='font-bold text-[3.8vw] lg:text-[1vw] md:text-[1.8vw]'>Social</h3>
-            <div className='flex gap-[3vw] md:gap-[0.7vw] mt-2'>
+            <div className='flex gap-[3vw] md:gap-[0.9vw] mt-2'>
               <a href='https://www.linkedin.com' target='_blank' rel='noopener noreferrer' className='text-lg font-thin'>
-                <i className='text-[4vw] lg:text-[1vw] md:text-[1.8vw]'><FaLinkedin /></i>
+                <i className='text-[4vw] lg:text-[1.6vw] md:text-[1.8vw]'><FaLinkedin /></i>
               </a>
               <a href='https://www.instagram.com' target='_blank' rel='noopener noreferrer' className='text-lg font-thin'>
-                <i className='text-[4vw] lg:text-[1vw] md:text-[1.8vw]'><FaInstagram /></i>
+                <i className='text-[4vw] lg:text-[1.6vw] md:text-[1.8vw]'><FaInstagram /></i>
               </a>
             </div>
           </div>

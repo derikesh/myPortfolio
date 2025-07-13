@@ -11,7 +11,7 @@ const CMS_and_tools = ['Wordpress', 'JWT', 'Docker', 'Git', 'Figma', 'Postman'];
 
 export default function Toggle() {
   return (
-    <div className='md:w-[80vw] sm:w-[90vw] w-[100%] mx-auto bg-gradient-to-r shadow-2xl from-teal-900 via-gray-800 to-black md:rounded-[1.4vw] rounded-xl overflow-hidden text-white tech_stack_wraper'>
+    <div className='lg:w-[85vw] md:w-[95vw] sm:w-[90vw] w-[100%] mx-auto bg-gradient-to-r shadow-2xl from-teal-900 via-gray-800 to-black md:rounded-[1vw] rounded-xl overflow-hidden text-white tech_stack_wraper'>
       <div className='w-full flex md:flex-row flex-col'>
 
         {/* content left */}
@@ -28,7 +28,8 @@ export default function Toggle() {
           <div className='grid md:grid-cols-3 grid-cols-2 h-full'>
             {[1, 2, 3, 4, 5, 6].map((item) => (
               <div key={item} className='single_item_stack relative border-[#d5fffb] border-[0.1vw]'>
-                <Image className='tech_iconn relative m-auto md:py-[3vw] py-[5vw] opacity-70 w-[18vw] sm:w-[12vw] md:w-[6vw]' src={ReactImg} alt="alls" />
+                <Image className='tech_iconn relative m-auto md:py-[5vw] lg:py-[3.6vw] py-[9vw] opacity-40 w-[18vw] sm:w-[12vw] md:w-[9vw] lg:w-[6vw]' src={ReactImg} alt="alls" />
+                <div className='absolute lg:left-[42%] md:left-[38%] left-[40%] top-[80%] lg:text-[1vw] md:text-[1.8vw] text-[3vw]' >React</div>
               </div>
             ))}
           </div>

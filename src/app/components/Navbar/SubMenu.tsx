@@ -9,7 +9,7 @@ const SubMenu =  React.memo( ( {clicked}:{clicked:boolean} ) => {
                 
                 {/* Left Side - Contact Info */}
                 <div className="md:w-1/2 w-full flex flex-col sm:justify-center justify-start items-start md:pl-12  ">
-                  <h3 className="text-white md:text-lg text-sm mb-2 font-thin">Start a conversation</h3>
+                  <h3 className="text-white md:text-[1vw] text-[2vw] mb-2 font-thin">Start a conversation</h3>
                   <a 
                     href="mailto:your.email@example.com" 
                     className="md:text-[2vw] text-[4vw] font-medium underline text-slate-400 hover:text-gray-300 transition-colors"
@@ -20,7 +20,7 @@ const SubMenu =  React.memo( ( {clicked}:{clicked:boolean} ) => {
 
                 {/* Right Side - Navigation Menu */}
                 <div className="md:w-1/2 w-full flex md:justify-center justify-start items-center md:mb-0 mb-20">
-                  <ul className="text-white flex flex-col gap-16 text-2xl font-semibold">
+                  <ul className="text-white flex flex-col gap-[4vw] text-2xl font-semibold">
                     <li className="md:text-[4.3vw] text-[12vw] font-light hover:text-gray-300 transition-colors cursor-pointer">Home</li>
                     <li className="md:text-[4.3vw] text-[12vw] font-light hover:text-gray-300 transition-colors cursor-pointer">About</li>
                     <li className="md:text-[4.3vw] text-[12vw] font-light hover:text-gray-300 transition-colors cursor-pointer">Projects</li>

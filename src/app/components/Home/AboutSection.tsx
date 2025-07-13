@@ -18,7 +18,7 @@ const AboutSection = () => {
           className="w-full h-auto object-cover"
         />
       </div>
-      <div className="home_layout bg-[#252525] mx-auto px-6 py-32 relative z-10">
+      <div className="home_layout bg-gray-900 mx-auto px-6 py-32 relative z-10">
         <SectionTitle  color="white" title="ABOUT ME"   />
        <div className="about_me md:text-[2vw] text-[4.6vw] flex flex-col gap-[6vw] md:gap-[2vw] text-center items-center font-grotesk text-white mx-auto leading-relaxed my-[16vw] md:my-[3.5vw]" >
            <p>
