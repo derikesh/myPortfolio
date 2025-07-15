@@ -21,7 +21,7 @@ const WorkSection = () => {
            <SingleWorkCard customeClass={'w-full h-auto  rounded-2xl md:overflow-hidden relative aspect-[692/364] h-full '} />
       </div>
 
-      <Button variant="primary" className="my-8 md:mt-0 mt-[18vw]" >
+      <Button variant="primary" className="my-8 md:mt-[3vw] mt-[18vw]" >
        View all works
         </Button>
 

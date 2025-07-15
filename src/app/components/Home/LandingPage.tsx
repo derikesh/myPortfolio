@@ -4,7 +4,7 @@ import Button from '../Common/Button';
 const LandingPage = () => {
   return (
     <div className="home_layout">
-      <div className="flex md:flex-row flex-col items-center justify-between min-h-[80vh] gap-12">
+      <div className="flex md:flex-row flex-col items-center justify-between min-h-[80vh] gap-12 md:py-0 py-12">
         {/* Left Side - Content */}
         <div className="md:w-1/2 w-full">
           <h1 className="lg:text-[5vw] md:text-[7vw] text-[12vw] text-black font-karantina font-bold leading-[1.1] mb-6">
@@ -15,7 +15,7 @@ const LandingPage = () => {
           <p className="text-gray-600 xl:text-[1vw] mb-8 leading-relaxed">
             I create modern, responsive web experiences with cutting-edge technologies. Specialized in React, Next.js, and performance optimization.
           </p>
-          <Button variant="primary">View My Work</Button>
+          <Button>View My Work</Button>
         </div>
 
         {/* Right Side - Image/Space */}
