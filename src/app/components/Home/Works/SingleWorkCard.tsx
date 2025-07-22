@@ -35,7 +35,7 @@ export default function SingleWorkCard({customeClass}:SINGLE_INTERFACE) {
          {
           !isResponsive && (
              <div className={`absolute inset-32 flex items-center z-30 justify-center transition-opacity duration-300 ${ (isHovered || isResponsive) ? 'opacity-100' : 'opacity-0'}`}>
-              <h2 className="text-white md:text-[3vw] text-[5vw] font-bold">Gamit</h2>
+              <h2 className="text-white md:text-[3vw] text-[5vw] font-bold">GAMEIT</h2>
          </div>
           )
          }
@@ -50,7 +50,7 @@ export default function SingleWorkCard({customeClass}:SINGLE_INTERFACE) {
         }`}
       >
         <h2 className="md:hidden block text-black md:text-[3vw] text-[5.6vw] bg-white pt-4 w-full text-center font-bold">Gamit</h2>
-        <p className="relative w-full text-center h-[15%] py-4  md:text-[1.2vw] text-[3.6vw] text-black bg-white ">Two velodromes, one seamless execution</p>
+        <p className="relative w-full text-center h-[20%] py-4  md:text-[1vw] text-[3.6vw] text-black bg-white ">Gammit is an application with 2 games implemented with  real time scoring system .unlocking avatar getting top ranked on any games </p>
       </div>
 
     </div>

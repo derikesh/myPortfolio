@@ -17,9 +17,6 @@ export default function Toggle() {
   
   let finalArr = activeTech ? ModenFrameWorks : CMS_and_tools;
 
-  function throttle(){
-
-  }
 
   function changeTech(){
     setActiveTech(!activeTech);

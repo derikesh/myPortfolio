@@ -11,7 +11,7 @@ const WorkTopContent: React.FC<WorkTopContentProps> = ({ isHovered }) => {
   return (
     <div
       className={`first_content h-[100%] ${isHovered ? 'md:bg-black/50' : ''} relative transition-transform duration-300 delay-75 ease-in-out z-20 ${
-        isHovered ? '-translate-y-[15%]' : ''
+        isHovered ? '-translate-y-[20%]' : ''
       }`}
     >
       <div className="absolute bottom-4 w-full z-0">

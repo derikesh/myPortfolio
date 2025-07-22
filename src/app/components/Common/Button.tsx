@@ -9,7 +9,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ variant, children, onClick, className }) => {
-  const baseStyles = 'border-4  border-black md:text-[1vw] text-[3vw] text-white overflow-hidden rounded-full font-medium transition-colors duration-300 relative group flex items-center justify-center gap-2';
+  const baseStyles = 'border-4  border-black md:text-[1.2vw] text-[3vw] text-white overflow-hidden rounded-full font-medium transition-colors duration-300 relative group flex items-center justify-center gap-2';
   const primaryStyles = 'bg-black text-white group-hover:text-black';
 
   return (
