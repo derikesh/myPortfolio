@@ -37,6 +37,30 @@ body {
 
 }
 
+.stack-item::after{
+  content: "";
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  position:absolute;
+  top: 0;
+  background: black;
+  left: 0;
+  transform-origin: top;
+  z-index: -1;
+}
+
+.animation-out {
+  transition: transform 0.5s, opacity 0.5s;
+  transform: translateY(100%);
+  opacity: 0;
+}
+
+.animation-in {
+   transform: translateY(0);
+   opacity: 1;
+}
+
 /* Shake animation for interactive elements */
 @keyframes shake {
   0%, 100% { transform: translateX(0) translateY(0); }
@@ -47,3 +71,5 @@ body {
 .animate-shake {
   animation: shake 0.5s ease-in-out;
 }
+
+

@@ -29,15 +29,15 @@ const AboutSection = () => {
 
           <AnimatedDiv>
             <p>
-              My name is Rikesh. I’m a frontend software developer with roots in
+              My name is Rikesh. I’m a frontend <span className="bg-purple-600/20 px-1">software developer</span> with roots in
               system thinking and user interaction. I’m passionate about music,
-              technology, and everything that involves <span className="bg-purple-600 px-2 font-bold">creating out of nothing</span>
+              technology, and everything that involves creating out of nothing
             </p>
 
             <p>
-              Everything I know is self-taught, which at this point has allowed me
+              Everything I know is <span className="bg-purple-600/20 px-1">self-taught</span>, which at this point has allowed me
               to learn and adapt to any new technology or idea. I started my journey
-              from making illustrations to progressively building full-stack
+              from making illustrations to progressively building <span className="bg-purple-600/20 px-1">full-stack</span>
               applications. My hunger doesn’t end here
             </p>
 

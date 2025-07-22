@@ -8,13 +8,13 @@ interface LandingVectorProps extends React.SVGProps<SVGSVGElement> {
 }
 
 // Throttle function for performance
-const throttle = (func: Function, limit: number) => {
+export const throttle = (func: Function, limit: number) => {
   let inThrottle: boolean;
   return function(this: any, ...args: any[]) {
-    if (!inThrottle) {
+    if (inThrottle) {
       func.apply(this, args);
-      inThrottle = true;
-      setTimeout(() => inThrottle = false, limit);
+      inThrottle = false;
+      setTimeout(() => inThrottle =true, limit);
     }
   };
 };

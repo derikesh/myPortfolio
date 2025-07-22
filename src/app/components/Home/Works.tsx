@@ -1,3 +1,6 @@
+'use client'
+
+import AnimatedDiv from "../Common/AnimatedDiv";
 import Button from "../Common/Button";
 import SectionTitle from "../Common/SectionTitle";
 import AnimateButton from "./Works/AnimateButton";
@@ -14,12 +17,14 @@ const WorkSection = () => {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, quo fugit. Cum alias odit dolorum sint illum explicabo sit necessitatibus fugiat facilis officia. Doloremque, ducimus.
         </p>
 
-      <div className="grid md:grid-cols-2 grid-cols-1 md:gap-4 gap-28 justify-start  works_wrap">
+      <AnimatedDiv>
+        <div className="grid md:grid-cols-2 grid-cols-1 md:gap-4 gap-28 justify-start  works_wrap">
           <SingleWorkCard customeClass={'w-full h-auto  rounded-2xl md:overflow-hidden relative aspect-[692/364] h-full '} />
           <SingleWorkCard customeClass={'w-full h-auto  rounded-2xl md:overflow-hidden relative aspect-[692/364] h-full '} />
           <SingleWorkCard customeClass={'w-full h-auto  rounded-2xl md:overflow-hidden relative aspect-[692/364] h-full '} />
            <SingleWorkCard customeClass={'w-full h-auto  rounded-2xl md:overflow-hidden relative aspect-[692/364] h-full '} />
       </div>
+      </AnimatedDiv>
 
       <Button variant="primary" className="my-8 md:mt-[3vw] mt-[18vw]" >
        View all works

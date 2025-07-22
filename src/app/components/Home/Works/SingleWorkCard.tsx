@@ -50,7 +50,7 @@ export default function SingleWorkCard({customeClass}:SINGLE_INTERFACE) {
         }`}
       >
         <h2 className="md:hidden block text-black md:text-[3vw] text-[5.6vw] bg-white pt-4 w-full text-center font-bold">Gamit</h2>
-        <p className="relative w-full text-center h-[20%] py-4  md:text-[1vw] text-[3.6vw] text-black bg-white ">Gammit is an application with 2 games implemented with  real time scoring system .unlocking avatar getting top ranked on any games </p>
+        <p className="relative w-full text-center h-[20%] py-4  md:text-[1.1vw] text-[3.6vw] text-black bg-white ">Gammit is an application with 2 games implemented with  real time scoring system .unlocking avatar getting top ranked on any games </p>
       </div>
 
     </div>
