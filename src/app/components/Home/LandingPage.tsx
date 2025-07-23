@@ -10,7 +10,7 @@ const LandingPage = () => {
           <h1 className="lg:text-[5.4vw] md:text-[7vw] text-[12vw] text-black font-karantina font-bold leading-[1.1] mb-6">
             FRONTEND 
             <br />
-            ENGINEER
+            DEVELOPER
           </h1>
           <p className="text-gray-600 xl:text-[1.2vw] mb-8 leading-relaxed">
             I create modern, responsive web experiences with cutting-edge technologies. Specialized in React, Next.js, and performance optimization.
