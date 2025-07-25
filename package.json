@@ -16,6 +16,7 @@
     "@studio-freight/lenis": "^1.0.42",
     "autoprefixer": "^10.4.21",
     "framer-motion": "^12.23.0",
+    "glider-js": "^1.7.9",
     "loadash": "^1.0.0",
     "lodash": "^4.17.21",
     "next": "15.3.4",
@@ -27,6 +28,7 @@
     "tailwindcss": "^3.4.17"
   },
   "devDependencies": {
+    "@types/glider-js": "^1.7.12",
     "@types/lodash": "^4.17.20",
     "@types/node": "^20",
     "@types/react": "^19",

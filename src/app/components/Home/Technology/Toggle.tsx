@@ -63,7 +63,7 @@ export default function Toggle() {
           {/* trigger change icons and content */}
           <div
             onClick={changeIcons}
-            className='absolute md:top-[50%] md:left-[100%] left-[50%] top-[100%] transform -translate-x-1/2 -translate-y-1/2 z-30 bg-[#d5fffb] md:p-[2vw] p-[3vw] rounded-full'
+            className='absolute md:top-[50%] md:left-[100%] left-[50%] top-[100%] transition-transform duration-200 ease-out -translate-x-1/2 -translate-y-1/2 z-30 bg-[#d5fffb] md:p-[2vw] p-[3vw] rounded-full hover:scale-[1.2]'
           >
             <BsArrowRepeat fill='black' className='md:w-[1.8vw] md:h-[1.8vw] h-[4vw] w-[4vw]' />
           </div>
