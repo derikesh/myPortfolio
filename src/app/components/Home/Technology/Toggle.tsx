@@ -41,14 +41,15 @@ export default function Toggle() {
       <div className='w-full flex md:flex-row flex-col'>
 
         {/* content left */}
-        <div className='md:w-[40%] bg-gradient-to-r shadow-2xl from-teal-900 via-gray-800 to-slate-900 content_left border-[#d5fffb] border-[0.1vw] relative flex flex-col items-start justify-center px-[2.6vw] md:py-0 py-[10vw]'>
+        <div className='md:w-[40%] bg-gradient-to-r shadow-2xl from-teal-900 via-gray-800 to-slate-900 content_left border-[#d5fffb] border-[0.1vw] relative flex flex-col items-start justify-center px-[2.6vw] md:py-0 py-[28vw]'>
+          
           <div
             className={`absolute w-full h-full transition-opacity duration-500 ease-in-out flex flex-col items-start justify-center ${
               leftContent.heading === 'Modern Frameworks' ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <h3 className='font-karantina md:text-[4vw] text-[8vw] leading-[1.1]'>{leftContent.heading}</h3>
-            <p className='lg:text-[1vw] md:text-[1.5vw] text-[3vw] mt-[1vw] md:w-[22vw]'>{leftContent.paragraph}</p>
+            <h3 className='font-karantina md:text-[4vw] text-[10vw] leading-[1.1]'>{leftContent.heading}</h3>
+            <p className='lg:text-[1vw] md:text-[1.5vw] text-[3.8vw] mt-[1vw] md:w-[22vw] w-[90%]'>{leftContent.paragraph}</p>
           </div>
 
           <div
@@ -56,14 +57,14 @@ export default function Toggle() {
               leftContent.heading === 'CMS and Tools' ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            <h3 className='font-karantina md:text-[4vw] text-[8vw] leading-[1.1]'>{leftContent.heading}</h3>
-            <p className='lg:text-[1vw] md:text-[1.5vw] text-[3vw] mt-[1vw] md:w-[22vw]'>{leftContent.paragraph}</p>
+            <h3 className='font-karantina md:text-[4vw] text-[10vw] leading-[1.1]'>{leftContent.heading}</h3>
+            <p className='lg:text-[1vw] md:text-[1.5vw] text-[3.8vw] mt-[1vw] md:w-[22vw] w-[90%]'>{leftContent.paragraph}</p>
           </div>
 
           {/* trigger change icons and content */}
           <div
             onClick={changeIcons}
-            className='absolute md:top-[50%] md:left-[100%] left-[50%] top-[100%] transition-transform duration-200 ease-out -translate-x-1/2 -translate-y-1/2 z-30 bg-[#d5fffb] md:p-[2vw] p-[3vw] rounded-full hover:scale-[1.2]'
+            className='absolute md:top-[50%] md:left-[100%] left-[50%] top-[100%] transition-transform duration-200 ease-out -translate-x-1/2 -translate-y-1/2 z-30 bg-[#d5fffb] md:p-[2vw] p-[5vw] rounded-full hover:scale-[1.2]'
           >
             <BsArrowRepeat fill='black' className='md:w-[1.8vw] md:h-[1.8vw] h-[4vw] w-[4vw]' />
           </div>

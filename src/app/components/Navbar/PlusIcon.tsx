@@ -1,6 +1,6 @@
 // Create a custom animated icon component
 const AnimatedMenuIcon = ({ clicked }: { clicked: boolean }) => (
-  <div className="relative w-[2vw] h-[2vw] flex items-center justify-center">
+  <div className="relative md:w-[2vw] md:h-[2vw] w-[3vw] h-[3vw] flex items-center justify-center">
     {/* Horizontal line */}
     <div 
       className={`absolute md:w-[1.6vw] md:h-[0.2vw] w-[3.2vw] h-[0.52vw]  bg-current transition-all duration-700 ease-in-out ${

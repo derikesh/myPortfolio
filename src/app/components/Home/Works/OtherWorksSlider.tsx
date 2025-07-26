@@ -19,11 +19,14 @@ export default function OtherWorksSlider({ works }: OtherWorksSliderProps) {
         slidesToShow: 1,
         slidesToScroll: 1,
         draggable: true,
+        dragVelocity: 1.5,
         dots: '.glider-dots',
         arrows: {
           prev: '.glider-prev',
           next: '.glider-next'
         },
+        scrollLock: true,
+        scrollLockDelay: 250,
         responsive: [
           {
             breakpoint: 640,
@@ -65,13 +68,13 @@ export default function OtherWorksSlider({ works }: OtherWorksSliderProps) {
 
         {/* Navigation Arrows */}
         <button 
-          className="hidden !left-[26px] top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-black text-white rounded-full w-10 h-10  items-center justify-center hover:bg-gray-800 transition-colors duration-200"
+          className="glider-prev absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 bg-black text-white rounded-full w-[3vw] h-[3vw] md:w-[2vw] md:h-[2vw] hidden md:flex items-center justify-center hover:bg-gray-800 transition-colors duration-200"
           aria-label="Previous"
         >
           &#8249;
         </button>
         <button 
-          className="hidden right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-black text-white rounded-full w-10 h-10  items-center justify-center hover:bg-gray-800 transition-colors duration-200"
+          className="glider-next absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 bg-black text-white rounded-full w-[3vw] h-[3vw] md:w-[2vw] md:h-[2vw] hidden md:flex items-center justify-center hover:bg-gray-800 transition-colors duration-200"
           aria-label="Next"
         >
           &#8250;

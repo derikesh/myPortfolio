@@ -21,15 +21,15 @@ export default function Footer() {
           </div>
           <div>
             <h3 className='font-bold text-[3.8vw] lg:text-[1vw] md:text-[1.8vw]'>Contact</h3>
-            <p className='text-[3vw] lg:text-[0.9vw] md:text-[1vw] font-thin'>Email: demo@example.com</p>
+            <p className='text-[3vw] lg:text-[0.9vw] md:text-[1vw] font-thin'>Email: rikeshsherpa1@gmail.com</p>
           </div>
           <div>
             <h3 className='font-bold text-[3.8vw] lg:text-[1vw] md:text-[1.8vw]'>Social</h3>
             <div className='flex gap-[3vw] md:gap-[0.9vw] mt-2'>
-              <a href='https://www.linkedin.com' target='_blank' rel='noopener noreferrer' className='text-lg font-thin'>
+              <a href='https://www.linkedin.com/in/rikesh-sherpa-4278a3223/' target='_blank' rel='noopener noreferrer' className='text-lg font-thin'>
                 <i className='text-[4vw] lg:text-[1.6vw] md:text-[1.8vw]'><FaLinkedin /></i>
               </a>
-              <a href='https://www.instagram.com' target='_blank' rel='noopener noreferrer' className='text-lg font-thin'>
+              <a href='https://www.instagram.com/_rikesh_sherpa/' target='_blank' rel='noopener noreferrer' className='text-lg font-thin'>
                 <i className='text-[4vw] lg:text-[1.6vw] md:text-[1.8vw]'><FaInstagram /></i>
               </a>
             </div>
@@ -39,12 +39,14 @@ export default function Footer() {
 
 
       <div className='flex w-full justify-between items-center md:pt-[10vw] pt-[20vw] footer_last home_layout transition-transform duration-300 group'>
-        <div className='flex flex-col items-start'>
-          <p className='text-[3vw] lg:text-[1vw] md:text-[1.8vw] font-thin'>Got A Project In Mind?</p>
-          <button className='text-[12vw] md:text-[8vw] group-hover:text-purple-500 group-hover:scale-105 transition-transform duration-300'>
-            LET'S TALK
-          </button>
-        </div>
+        <a href="mailto:rikeshsherpa1@gmail.com" className="w-fit block">
+          <div className='flex flex-col items-start'>
+            <p className='text-[3vw] lg:text-[1vw] md:text-[1.8vw] font-thin'>Got A Project In Mind?</p>
+            <div className='text-[12vw] md:text-[8vw] group-hover:text-purple-500 group-hover:scale-105 transition-transform duration-300'>
+              LET'S TALK
+            </div>
+          </div>
+        </a>
         <FaSquareArrowUpRight className='text-[12vw] md:text-[8vw] group-hover:text-purple-500 group-hover:scale-105 transition-transform duration-300' />
       </div>
 

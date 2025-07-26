@@ -5,24 +5,24 @@ import image from "../../assets/images/bg_sep.svg";
 import SectionTitle from "../Common/SectionTitle";
 import Button from "../Common/Button";
 import AnimatedDiv from "../Common/AnimatedDiv";
+import Link from "next/link";
 
 const AboutSection = () => {
   return (
-    <div className="relative bottom-12">
-
-      <div className="absolute h-1/2 -bottom-16 bg-[#3a3a3a] w-full" />
+    <div className="relative md:bottom-12">
 
       {/* Background Image */}
-      <div className="relative inset-0 w-full z-0 top-2">
+      <div className="relative inset-0 z-0 top-2">
         <Image
           src={image}
           alt="Section Break"
-          className="w-full h-auto object-cover"
+          className="w-full h-auto object-contain"
         />
       </div>
-      <div className="home_layout bg-gray-900 mx-auto px-6 py-32 relative z-10">
+
+      <div className="home_layout bg-gray-900 mx-auto px-6 md:py-32 py-20 relative z-10">
         <SectionTitle color="white" title="ABOUT ME" />
-        <div className="about_me md:text-[2vw] text-[4.6vw] flex flex-col gap-[6vw] md:gap-[2vw] text-center items-center font-grotesk text-white/90 mx-auto leading-relaxed my-[16vw] md:my-[3.5vw] ">
+        <div className="about_me md:text-[2vw] text-[4.8vw] flex flex-col gap-[6vw] md:gap-[2vw] sm:text-center items-center font-grotesk text-white/90 mx-auto leading-relaxed my-[10vw] md:my-[3.5vw] ">
           {/* Background Decorative Circles */}
           <div className="absolute top-20 right-0 w-[30vw] h-[30vw] bg-purple-600/30 blur-3xl rounded-full opacity-30 -z-10"></div>
           <div className="absolute bottom-20 left-0 w-[25vw] h-[25vw] bg-teal-500/30 blur-3xl rounded-full opacity-30 -z-10"></div>
@@ -45,7 +45,9 @@ const AboutSection = () => {
           </AnimatedDiv>
         </div>
         <center>
-          <Button variant="secondary" >More About Me</Button>
+         <Link href="/about" className="w-fit block" >
+           <Button variant="secondary" >Lean More</Button>
+         </Link>
         </center>
       </div>
     </div>

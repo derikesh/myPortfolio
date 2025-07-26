@@ -2,21 +2,8 @@
 
 import React from 'react'
 import Image from 'next/image';
-import { 
-  SiNextdotjs, 
-  SiTypescript, 
-  SiNodedotjs, 
-  SiMongodb, 
-  SiReact, 
-  SiFirebase, 
-  SiWordpress, 
-  SiPostgresql,
-  SiPrisma,
-  SiGreensock,
-  SiThreedotjs,
-  SiBootstrap
-} from 'react-icons/si';
 import { FiGithub, FiLink } from 'react-icons/fi';
+import { useTechIcons } from '@/app/hooks/useTechIcons';
 
 import { SINGLE_WORK_INTERFACE } from '../Works';
 
@@ -26,24 +13,8 @@ interface OTHER_WORKS_INTERFACE {
 
 export default function OtherWorksCard({ data }: OTHER_WORKS_INTERFACE) {
   
-  // Function to get icon component based on tech name
-  const getTechIcon = (techName: string) => {
-    const iconMap: { [key: string]: React.ReactNode } = {
-      'next': <SiNextdotjs className="text-gray-600 md:text-[0.8vw] text-[3vw]" />,
-      'typescript': <SiTypescript className="text-gray-600 md:text-[0.8vw] text-[3vw]" />,
-      'node': <SiNodedotjs className="text-gray-600 md:text-[0.8vw] text-[3vw]" />,
-      'mongoDB': <SiMongodb className="text-gray-600 md:text-[0.8vw] text-[3vw]" />,
-      'react': <SiReact className="text-gray-600 md:text-[0.8vw] text-[3vw]" />,
-      'firebase': <SiFirebase className="text-gray-600 md:text-[0.8vw] text-[3vw]" />,
-      'wordpress': <SiWordpress className="text-gray-600 md:text-[0.8vw] text-[3vw]" />,
-      'postgrace': <SiPostgresql className="text-gray-600 md:text-[0.8vw] text-[3vw]" />,
-      'prisma': <SiPrisma className="text-gray-600 md:text-[0.8vw] text-[3vw]" />,
-      'gsap': <SiGreensock className="text-gray-600 md:text-[0.8vw] text-[3vw]" />,
-      'threejs': <SiThreedotjs className="text-gray-600 md:text-[0.8vw] text-[3vw]" />,
-      'bootstrap': <SiBootstrap className="text-gray-600 md:text-[0.8vw] text-[3vw]" />
-    };
-    return iconMap[techName] || null;
-  };
+  // Use the custom hook for tech icons
+  const techIcons = useTechIcons(data.techUsed, "text-gray-600 md:text-[0.8vw] text-[4.8vw]");
 
   return (
     <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
@@ -60,23 +31,23 @@ export default function OtherWorksCard({ data }: OTHER_WORKS_INTERFACE) {
       {/* Content Section */}
       <div className="md:p-[1.2vw] p-[4vw]">
         {/* Title */}
-        <h3 className="font-karantina text-black md:text-[1.8vw] text-[5vw] leading-tight md:mb-[0.5vw] mb-[2vw]">
+        <h3 className="font-karantina text-black md:text-[1.8vw] text-[7vw] leading-tight md:mb-[0.5vw] mb-[2vw]">
           {data.name}
         </h3>
         
         {/* Description */}
-        <p className="text-gray-700 md:text-[0.9vw] text-[3.5vw] leading-relaxed md:mb-[1vw] mb-[4vw] line-clamp-5">
+        <p className="text-gray-700 md:text-[0.9vw] text-[4.4vw] leading-relaxed md:mb-[1vw] mb-[4vw] line-clamp-5">
           {data.description}
         </p>
         
         {/* Tech Stack */}
         <div className="md:mb-[1vw] mb-[4vw]">
           <div className="flex items-center md:gap-[0.5vw] gap-[2vw] md:mb-[0.5vw] mb-[2vw]">
-            <span className="text-gray-800 font-semibold md:text-[0.8vw] text-[3vw]">Tech:</span>
+            <span className="text-gray-800 font-semibold md:text-[0.8vw] text-[4.5vw]">Tech:</span>
             <div className="flex items-center md:gap-[0.3vw] gap-[1vw]">
-              {data.techUsed.map((tech, index) => (
+              {techIcons.map((tech, index) => (
                 <span key={index}>
-                  {getTechIcon(tech)}
+                  {tech.icon}
                 </span>
               ))}
             </div>
@@ -85,24 +56,49 @@ export default function OtherWorksCard({ data }: OTHER_WORKS_INTERFACE) {
         
         {/* Action Buttons */}
         <div className="flex md:gap-[0.5vw] gap-[2vw]">
-          <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center md:gap-[0.3vw] gap-[1vw] flex-1 text-gray-700 border border-gray-300 md:py-[0.5vw] md:px-[0.8vw] py-[2vw] px-[3vw] rounded-lg hover:bg-gray-50 transition-colors duration-200 md:text-[0.8vw] text-[3vw]"
-          >
-            <FiGithub className="md:text-[0.8vw] text-[3vw]" />
-            Code
-          </a>
-          <a
-            href="https://example.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center md:gap-[0.3vw] gap-[1vw] flex-1 bg-black text-white md:py-[0.5vw] md:px-[0.8vw] py-[2vw] px-[3vw] rounded-lg hover:bg-gray-800 transition-colors duration-200 md:text-[0.8vw] text-[3vw]"
-          >
-            <FiLink className="md:text-[0.8vw] text-[3vw]" />
-            Demo
-          </a>
+          
+                {data.siteLink ? (
+            <a
+              href={data.siteLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center md:gap-[0.3vw] gap-[1vw] flex-1 bg-black text-white md:py-[0.5vw] md:px-[0.8vw] py-[2vw] px-[3vw] rounded-lg hover:bg-gray-800 transition-colors duration-200 md:text-[0.8vw] text-[3vw]"
+            >
+              <FiLink className="md:text-[0.8vw] text-[3vw]" />
+              Demo
+            </a>
+          ) : (
+            <button
+              disabled
+              className="flex items-center justify-center md:gap-[0.3vw] gap-[1vw] flex-1 bg-gray-200 text-gray-400 md:py-[0.5vw] md:px-[0.8vw] py-[2vw] px-[3vw] rounded-lg cursor-not-allowed md:text-[0.8vw] text-[3vw] opacity-50"
+            >
+              <FiLink className="md:text-[0.8vw] text-[3vw]" />
+              Demo
+            </button>
+          )}
+          
+          
+          {data.githubLink ? (
+            <a
+              href={data.githubLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center md:gap-[0.3vw] gap-[1vw] flex-1 text-gray-700 border border-gray-300 md:py-[0.5vw] md:px-[0.8vw] py-[2vw] px-[3vw] rounded-lg hover:bg-gray-50 transition-colors duration-200 md:text-[0.8vw] text-[3vw]"
+            >
+              <FiGithub className="md:text-[0.8vw] text-[3vw]" />
+              Code
+            </a>
+          ) : (
+            <button
+              disabled
+              className="flex items-center justify-center md:gap-[0.3vw] gap-[1vw] flex-1 text-gray-400 border border-gray-200 md:py-[0.5vw] md:px-[0.8vw] py-[2vw] px-[3vw] rounded-lg cursor-not-allowed md:text-[0.8vw] text-[3vw] opacity-50 bg-gray-50"
+            >
+              <FiGithub className="md:text-[0.8vw] text-[3vw]" />
+              Code
+            </button>
+          )}
+          
+        
         </div>
       </div>
     </div>

@@ -9,7 +9,9 @@ import AnimatedDiv from "../Common/AnimatedDiv";
 export interface SINGLE_WORK_INTERFACE {
   name:string,
   techUsed:string[],
-  description:string
+  description:string,
+  githubLink:(string | null),
+  siteLink:(string | null)
 }
 
 const WorkSection = () => {
@@ -19,51 +21,77 @@ const WorkSection = () => {
     { 
       name:'GAMEIT',
       techUsed:['next','postgrace','prisma'],
-      description:'Gammit is a skill-based gaming platform with fast, competitive challenges that test reflexes, knowledge, and strategy. Players compete across mini-games, earn points, and climb leaderboards while unlocking rank-based avatars and achievements. Designed for replayability, Gammit offers an engaging and evolving competitive experience with more games coming soon.'
+      description:'Gammit is a skill-based gaming platform with fast, competitive challenges that test reflexes, knowledge, and strategy. Players compete across mini-games, earn points, and climb leaderboards while unlocking rank-based avatars and achievements. Designed for replayability, Gammit offers an engaging and evolving competitive experience with more games coming soon.',
+      siteLink:'https://gamit-phi.vercel.app/',
+      githubLink:'https://github.com/derikesh/gamit'
     },
     { 
      name:'Network Store',
      techUsed:['wordpress','bootstrap'],
-     description:'A product showcase website built with WordPress, designed to display various items with clean layouts and easy navigation. Focused on presenting products effectively with customizable sections and a user-friendly browsing experience.'
+     description:'A product showcase website built with WordPress, designed to display various items with clean layouts and easy navigation. Focused on presenting products effectively with customizable sections and a user-friendly browsing experience.',
+     siteLink:'https://networkstore.com.np/',
+     githubLink:null
     },
+
     { 
      name:'ESTORE',
      techUsed:['react','mongodb','node'],
-     description:'Estore is a full-featured e-commerce platform built with a modern web stack, designed for seamless product browsing and user interaction. It includes product listing, detailed product pages, user authentication, and cart management, with a focus on clean UI and smooth performance. The system was structured for scalability, enabling easy integration of future payment gateways and order tracking features.'
+     description:'Estore is a full-featured e-commerce platform built with a modern web stack, designed for seamless product browsing and user interaction. It includes product listing, detailed product pages, user authentication, and cart management, with a focus on clean UI and smooth performance. The system was structured for scalability, enabling easy integration of future payment gateways and order tracking features.',
+     siteLink:'https://estoreweb.vercel.app/',
+     githubLink:'https://github.com/derikesh/estore/'
+
     },
 
   ]
 
     const works2:SINGLE_WORK_INTERFACE[] = [
       { 
+       name:'Prime It',
+       techUsed:['taliwind'],
+       description:'Took frontend lead for prime it website development , collaborating with design team for smooth and slick interfaces',
+       siteLink:'https://www.primeitclub.com/',
+       githubLink:null
+
+      },
+      { 
+        name:'Portfolio',
+        techUsed:['react','three','gsap','tailwind'],
+        description:'Old portfolio made from react three js and gsap for smooth scroll aniamtion throughout the page',
+        siteLink:'https://portfolio25-eta.vercel.app/',
+        githubLink:null
+
+      },
+      { 
        name:'ICT',
        techUsed:['react','chakraUi'],
-       description:'Website made on collobration with other team for IT club for its biggest annual event.'
+       description:'Website made with collobration with other team for IT club biggest annual event.',
+       siteLink:'https://ictv7.primeitclub.com/',
+       githubLink:null
+
       },
-    { 
-      name:'Portfolio',
-      techUsed:['react','three','gsap','tailwind'],
-      description:'Old portfolio made from react three js for 3d model with gsap for smooth scroll aniamtion throughout the page'
-    },
-    //  { 
-    //   name:'Network Store',
-    //   techUsed:['wordpress','bootstrap'],
-    //   description:'application made from server actions and client side handling from next js application made from server actions and client side handling from next js s and client side handling from next js from server actions anext js'
-    //  },
       { 
       name:'Supreme Trade',
       techUsed:['wordpress','bootstrap'],
-      description:'First Project as wordpress developer , Created custome fileds and design for there corporate organization covering all information about them'
+      description:'First wordpress Project , Created custome fileds and design for there corporate organization covering all information about them',
+      siteLink:'https://sat.com.np/',
+      githubLink:null
+
      },
       { 
-     name:'Prime International',
+     name:'Prime Global',
      techUsed:['wordpress'],
-     description:'Project for prime school ,Created whole website with wordpress elementor and different plugin for funcationality of project'
+     description:'Project for prime school ,Created whole website with wordpress elementor and different plugin for funcationality of project',
+     siteLink:'https://primeglobalschool.edu.np/',
+     githubLink:null
+
     },
       { 
      name:'Utkrishta',
      techUsed:['wordpress'],
-     description:'Currently handling the maitance and development of web project for Utkrishta.Made from wordpress elementory'
+     description:'Currently handling the maitance and development of web project for Utkrishta.Made from wordpress elementory',
+     siteLink:'https://primeinternationalschool.edu.np/',
+     githubLink:null
+
     },
 
   ]
@@ -75,7 +103,7 @@ const WorkSection = () => {
 
         <SectionTitle title="Works"/>
 
-        <p className="md:text-[1.3vw] text-[4.6vw] md:w-[70%] w-[100%] flex flex-col gap-12 text-center items-center font-grotesk text-black mx-auto leading-relaxed my-[10vw] md:my-[3.9vw]">
+        <p className="md:text-[1.3vw] text-[4.8vw] md:w-[70%] w-[100%] flex flex-col gap-12 text-center items-center font-grotesk text-black mx-auto leading-relaxed my-[10vw] md:my-[3.9vw]">
           I'v worked across lots of project from figma design to full responsive applications.
         </p>
 
