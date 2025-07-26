@@ -43,7 +43,7 @@ export default function OtherWorksSlider({ works }: OtherWorksSliderProps) {
             breakpoint: 1280,
             settings: {
               slidesToShow: 4,
-              slidesToScroll: 1,
+              slidesToScroll: 2,
             }
           }
         ]

@@ -84,6 +84,7 @@ body {
 .glider-track {
   width: 100%;
   overflow-x: hidden !important;
+  align-items: start !important;
 }
 .glider-dot {
   background: #e5e7eb;

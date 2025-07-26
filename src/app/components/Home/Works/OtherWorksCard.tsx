@@ -65,7 +65,7 @@ export default function OtherWorksCard({ data }: OTHER_WORKS_INTERFACE) {
         </h3>
         
         {/* Description */}
-        <p className="text-gray-700 md:text-[0.9vw] text-[3.5vw] leading-relaxed md:mb-[1vw] mb-[4vw] line-clamp-3">
+        <p className="text-gray-700 md:text-[0.9vw] text-[3.5vw] leading-relaxed md:mb-[1vw] mb-[4vw] line-clamp-5">
           {data.description}
         </p>
         

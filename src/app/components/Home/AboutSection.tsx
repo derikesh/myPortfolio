@@ -28,20 +28,16 @@ const AboutSection = () => {
           <div className="absolute bottom-20 left-0 w-[25vw] h-[25vw] bg-teal-500/30 blur-3xl rounded-full opacity-30 -z-10"></div>
 
           <AnimatedDiv>
-            <p>
+            <p className="font-light" >
               My name is Rikesh. I’m a frontend <span className="bg-purple-600/20 px-1">software developer</span> with roots in
               system thinking and user interaction. I’m passionate about music,
               technology, and everything that involves creating out of nothing
-            </p>
-
-            <p>
+                <br></br>
               Everything I know is <span className="bg-purple-600/20 px-1">self-taught</span>, which at this point has allowed me
               to learn and adapt to any new technology or idea. I started my journey
               from making illustrations to progressively building <span className="bg-purple-600/20 px-1">full-stack</span>
-              applications. My hunger doesn’t end here
-            </p>
+              applications. My curiocity doesn’t end here
 
-            <p>
               I still plan to excel in
               technology that contributes to and adds value in both my workspace and
               self-learning journey
@@ -49,7 +45,7 @@ const AboutSection = () => {
           </AnimatedDiv>
         </div>
         <center>
-          <Button variant="secondary" >Learn More</Button>
+          <Button variant="secondary" >More About Me</Button>
         </center>
       </div>
     </div>

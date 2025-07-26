@@ -13,7 +13,7 @@ const LandingPage = () => {
             DEVELOPER
           </h1>
           <p className="text-gray-600 xl:text-[1.2vw] mb-8 leading-relaxed">
-            I create modern, responsive web experiences with cutting-edge technologies. Specialized in React, Next.js, and performance optimization.
+            With years of experience in building and crafting digital products, I turn concepts into fully functional systems. I love creating products that live on the internet.
           </p>
           <Button>View My Work</Button>
         </div>

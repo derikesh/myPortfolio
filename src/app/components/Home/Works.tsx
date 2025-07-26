@@ -1,9 +1,9 @@
 'use client'
 
-import Button from "../Common/Button";
 import SectionTitle from "../Common/SectionTitle";
 import SingleWorkCard from "./Works/SingleWorkCard";
 import OtherWorksSlider from "./Works/OtherWorksSlider";
+import AnimatedDiv from "../Common/AnimatedDiv";
 
 
 export interface SINGLE_WORK_INTERFACE {
@@ -19,46 +19,51 @@ const WorkSection = () => {
     { 
       name:'GAMEIT',
       techUsed:['next','postgrace','prisma'],
-      description:'js Application made from server actions and client side handling from next js from server actions and client side handling  from server actions and client side from next js'
+      description:'Gammit is a skill-based gaming platform with fast, competitive challenges that test reflexes, knowledge, and strategy. Players compete across mini-games, earn points, and climb leaderboards while unlocking rank-based avatars and achievements. Designed for replayability, Gammit offers an engaging and evolving competitive experience with more games coming soon.'
+    },
+    { 
+     name:'Network Store',
+     techUsed:['wordpress','bootstrap'],
+     description:'A product showcase website built with WordPress, designed to display various items with clean layouts and easy navigation. Focused on presenting products effectively with customizable sections and a user-friendly browsing experience.'
     },
     { 
      name:'ESTORE',
-     techUsed:['react','gsap','threejs'],
-     description:'application made from server actions and client side handling from next js application made from server actions and client side handlingtions and client side handling from next js from server actions and client side handling from next js'
+     techUsed:['react','mongodb','node'],
+     description:'Estore is a full-featured e-commerce platform built with a modern web stack, designed for seamless product browsing and user interaction. It includes product listing, detailed product pages, user authentication, and cart management, with a focus on clean UI and smooth performance. The system was structured for scalability, enabling easy integration of future payment gateways and order tracking features.'
     },
-     { 
-      name:'Network Store',
-      techUsed:['wordpress','bootstrap'],
-      description:'application made from server actions and client side handling from next js application made from server actions and client side handling from next js s and client side handling from next js from server actions anext js'
-     },
 
   ]
 
     const works2:SINGLE_WORK_INTERFACE[] = [
+      { 
+       name:'ICT',
+       techUsed:['react','chakraUi'],
+       description:'Website made on collobration with other team for IT club for its biggest annual event.'
+      },
     { 
-      name:'GAMEIT',
-      techUsed:['next','postgrace','prisma'],
-      description:'js Application made from server actions and client side handling from next js from server actions and client side handling  from server actions and client side from next js'
+      name:'Portfolio',
+      techUsed:['react','three','gsap','tailwind'],
+      description:'Old portfolio made from react three js for 3d model with gsap for smooth scroll aniamtion throughout the page'
     },
-    { 
-     name:'ESTORE',
-     techUsed:['react','gsap','threejs'],
-     description:'application made from server actions and client side handling from next js application made from server actions and client side handlingtions and client side handling from next js from server actions and client side handling from next js'
-    },
-     { 
-      name:'Network Store',
+    //  { 
+    //   name:'Network Store',
+    //   techUsed:['wordpress','bootstrap'],
+    //   description:'application made from server actions and client side handling from next js application made from server actions and client side handling from next js s and client side handling from next js from server actions anext js'
+    //  },
+      { 
+      name:'Supreme Trade',
       techUsed:['wordpress','bootstrap'],
-      description:'application made from server actions and client side handling from next js application made from server actions and client side handling from next js s and client side handling from next js from server actions anext js'
+      description:'First Project as wordpress developer , Created custome fileds and design for there corporate organization covering all information about them'
      },
       { 
-      name:'3D',
-      techUsed:['wordpress','bootstrap'],
-      description:'application made from server actions and client side handling from next js application made from server actions and client side handling from next js s and client side handling from next js from server actions anext js'
-     },
+     name:'Prime International',
+     techUsed:['wordpress'],
+     description:'Project for prime school ,Created whole website with wordpress elementor and different plugin for funcationality of project'
+    },
       { 
-     name:'ESTORE',
-     techUsed:['react','gsap','threejs'],
-     description:'application made from server actions and client side handling from next js application made from server actions and client side handlingtions and client side handling from next js from server actions and client side handling from next js'
+     name:'Utkrishta',
+     techUsed:['wordpress'],
+     description:'Currently handling the maitance and development of web project for Utkrishta.Made from wordpress elementory'
     },
 
   ]
@@ -88,7 +93,9 @@ const WorkSection = () => {
           Other Works
         </h2>
         
-        <OtherWorksSlider works={works2} />
+        <AnimatedDiv>
+          <OtherWorksSlider works={works2} />
+        </AnimatedDiv>
       </div>
 
         </div>
