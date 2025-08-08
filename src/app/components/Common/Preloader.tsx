@@ -12,6 +12,10 @@ const Preloader = () => {
       setTimeout(() => {
         setIsLoading(false);
       }, 800); 
+      window.scroll({
+        top:0,
+        behavior:'smooth'
+      })
     }, 1200); 
 
     return () => clearTimeout(timer);

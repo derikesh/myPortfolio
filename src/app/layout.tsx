@@ -12,6 +12,18 @@ import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/Common/ScrollToTop";
 
 import Preloader from "./components/Common/Preloader";
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Rikesh - Portfolio',
+    template: '%s | Rikesh'
+  },
+  description: 'Full Stack Developer & Designer passionate about creating exceptional digital experiences',
+  keywords: ['developer', 'portfolio', 'web development', 'design', 'react', 'next.js'],
+  authors: [{ name: 'Rikesh Sherpa' }],
+  creator: 'Rikesh Sherpa',
+}
 
 const grotesk = Space_Grotesk({
   variable: "--font-grotesk-sans",
@@ -35,9 +47,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-  
-
 
   return (
     <html suppressHydrationWarning lang="en">
