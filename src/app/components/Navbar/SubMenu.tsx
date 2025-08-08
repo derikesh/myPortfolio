@@ -18,9 +18,32 @@ const SubMenu =  React.memo( ( {clicked, setClicked}:{clicked:boolean, setClicke
                   <h3 className="text-white md:text-[1vw] text-[4vw] mb-2 font-thin">Start a conversation</h3>
                   <a 
                     href="mailto:rikeshhsherpa1@gmail.com" 
-                    className="md:text-[2vw] text-[4.8vw] font-medium underline text-slate-400 hover:text-gray-300 transition-colors"
+                    className="md:text-[2vw] text-[4.8vw] font-medium underline hover:text-gray-300 transition-colors"
                   >
-                    rikeshhsherpa1@gmail.com
+                    <span className="text-blue-400">r</span>
+                    <span className="text-red-400">i</span>
+                    <span className="text-yellow-400">k</span>
+                    <span className="text-blue-400">e</span>
+                    <span className="text-green-400">s</span>
+                    <span className="text-red-400">h</span>
+                    <span className="text-blue-400">h</span>
+                    <span className="text-red-400">s</span>
+                    <span className="text-yellow-400">h</span>
+                    <span className="text-blue-400">e</span>
+                    <span className="text-green-400">r</span>
+                    <span className="text-red-400">p</span>
+                    <span className="text-blue-400">a</span>
+                    <span className="text-yellow-400">1</span>
+                    <span className="text-slate-400">@</span>
+                    <span className="text-blue-400">g</span>
+                    <span className="text-red-400">m</span>
+                    <span className="text-yellow-400">a</span>
+                    <span className="text-blue-400">i</span>
+                    <span className="text-green-400">l</span>
+                    <span className="text-slate-400">.</span>
+                    <span className="text-red-400">c</span>
+                    <span className="text-blue-400">o</span>
+                    <span className="text-yellow-400">m</span>
                   </a>
                 </div>
 
@@ -41,7 +64,7 @@ const SubMenu =  React.memo( ( {clicked, setClicked}:{clicked:boolean, setClicke
                         href='/cv.pdf' 
                         download="Rikesh_Sherpa_CV.pdf"
                         onClick={handleLinkClick}
-                        className="text-purple-400 hover:text-purple-300 transition-colors duration-300"
+                        className="text-purple-400 hover:text-purple-300 transition-colors duration-300 underline"
                       >
                         Download CV ↓
                       </a>

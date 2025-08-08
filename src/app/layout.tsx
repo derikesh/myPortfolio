@@ -9,6 +9,7 @@ import LenisWrapper from "./components/Lenis/LenisWraper";
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
+import ScrollToTop from "./components/Common/ScrollToTop";
 
 const grotesk = Space_Grotesk({
   variable: "--font-grotesk-sans",
@@ -42,6 +43,7 @@ export default function RootLayout({
             <Navbar/>
             {children}
             <Footer/>
+            <ScrollToTop/>
           </LenisWrapper>
         </ThemeProvider>
       </body>
