@@ -1,12 +1,6 @@
 'use client'
 
-import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
-
-import { throttle } from '@/app/assets/landingVector/LandingVector';
-
-import ReactImg from '../../../assets/images/dump/React.svg';
-
 import { BsArrowRepeat } from "react-icons/bs";
 
 const ModenFrameWorks = ['react', 'node', 'mongoDB', 'firebase', 'postgrace', 'typescript'];
