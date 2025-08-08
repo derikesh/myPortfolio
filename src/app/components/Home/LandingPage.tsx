@@ -1,5 +1,6 @@
-import SvgIcon from "../../assets/landingVector/Prison";
 import Button from '../Common/Button';
+
+import LO from '../landingVector/V0'
 
 const LandingPage = () => {
   return (
@@ -21,9 +22,9 @@ const LandingPage = () => {
         </div>
 
         {/* Right Side - Image/Space */}
-        <div className="md:w-1/2 w-full flex justify-center">
+        <div className="md:w-1/2 h-fit w-full flex justify-center">
           <div className="relative md:ml-auto mr-[1vw] md:w-[29vw] w-[70vw] flex items-center justify-center z-0">
-            <SvgIcon />
+            <LO/>
             <div className="absolute h-[110px] w-full bg-black/50 blur-2xl rounded-2xl bottom-0 -z-10"></div>
           </div>
         </div>

@@ -11,6 +11,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import ScrollToTop from "./components/Common/ScrollToTop";
 
+import Preloader from "./components/Common/Preloader";
+
 const grotesk = Space_Grotesk({
   variable: "--font-grotesk-sans",
   subsets: ["latin"],
@@ -33,11 +35,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  
+
+
   return (
     <html suppressHydrationWarning lang="en">
       <body
         className={`${karantin.variable} ${grotesk.variable} ${geistMono.variable} ${ClashGrotesk.variable} antialiased`}
       >
+        <Preloader />
+
         <ThemeProvider attribute={'class'} defaultTheme="light" enableSystem >
           <LenisWrapper>
             <Navbar/>

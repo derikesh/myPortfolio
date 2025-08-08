@@ -20,30 +20,7 @@ const SubMenu =  React.memo( ( {clicked, setClicked}:{clicked:boolean, setClicke
                     href="mailto:rikeshhsherpa1@gmail.com" 
                     className="md:text-[2vw] text-[4.8vw] font-medium underline hover:text-gray-300 transition-colors"
                   >
-                    <span className="text-blue-400">r</span>
-                    <span className="text-red-400">i</span>
-                    <span className="text-yellow-400">k</span>
-                    <span className="text-blue-400">e</span>
-                    <span className="text-green-400">s</span>
-                    <span className="text-red-400">h</span>
-                    <span className="text-blue-400">h</span>
-                    <span className="text-red-400">s</span>
-                    <span className="text-yellow-400">h</span>
-                    <span className="text-blue-400">e</span>
-                    <span className="text-green-400">r</span>
-                    <span className="text-red-400">p</span>
-                    <span className="text-blue-400">a</span>
-                    <span className="text-yellow-400">1</span>
-                    <span className="text-slate-400">@</span>
-                    <span className="text-blue-400">g</span>
-                    <span className="text-red-400">m</span>
-                    <span className="text-yellow-400">a</span>
-                    <span className="text-blue-400">i</span>
-                    <span className="text-green-400">l</span>
-                    <span className="text-slate-400">.</span>
-                    <span className="text-red-400">c</span>
-                    <span className="text-blue-400">o</span>
-                    <span className="text-yellow-400">m</span>
+                   rikeshsherpa1@gmail.com
                   </a>
                 </div>
 
