@@ -17,13 +17,15 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: {
     default: 'Rikesh - Portfolio',
-    template: '%s | Rikesh'
+    template: '%s | Rikesh',
+    absolute:'Rikesh'
   },
   description: 'Full Stack Developer & Designer passionate about creating exceptional digital experiences',
   keywords: ['developer', 'portfolio', 'web development', 'design', 'react', 'next.js'],
   authors: [{ name: 'Rikesh Sherpa' }],
   creator: 'Rikesh Sherpa',
 }
+
 
 const grotesk = Space_Grotesk({
   variable: "--font-grotesk-sans",
@@ -40,6 +42,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
 
 export default function RootLayout({
   children,

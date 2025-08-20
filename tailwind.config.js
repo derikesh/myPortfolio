@@ -9,8 +9,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        clash: ['var(--font-clash)', 'sans-serif'], // External font
-        grotesk: ['var(--font-grotesk-sans)', 'sans-serif'], // Next.js font - ADD THIS
+        clash: ['var(--font-clash)', 'sans-serif'], 
+        grotesk: ['var(--font-grotesk-sans)', 'sans-serif'], 
         karantina:['var(--font-karantina-sans)','sans-serif']
       }
     },
