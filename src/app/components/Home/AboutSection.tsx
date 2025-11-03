@@ -29,7 +29,7 @@ const AboutSection = () => {
 
           <AnimatedDiv>
             <p className="font-light" >
-              My name is Rikesh. I’m a frontend <span className="bg-purple-600/20 px-1">software developer</span> with roots in
+              My name is Rikesh.<span className="bg-purple-600/20 px-1">software developer</span> with roots in
               system thinking and user interaction. I’m passionate about music,
               technology, and everything that involves creating out of nothing
                 <br></br>

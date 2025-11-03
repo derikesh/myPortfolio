@@ -18,11 +18,11 @@ export default function BlogSection() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-[5vw] md:gap-[2vw]">
           {[
             {
-              title: "Building Focused UIs: Small Patterns That Scale",
+              title: "Multi workers concept",
               excerpt:
-                "A short walkthrough of UI decisions I keep reusing across distracts.",
-              image: "https://picsum.photos/seed/ui/1200/600",
-              href: "/blog",
+                "Cloning youtube backend architecture through redis , ffmpeg , firebase ...",
+              image: "/works/blog1.jpg",
+              href: "/blog/multi-workers-concept",
             },
           ].map((post, idx) => (
             <div

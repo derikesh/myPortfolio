@@ -36,7 +36,7 @@ export default function SingleWorkCard({customeClass,data}:SINGLE_INTERFACE) {
         <div className='work_image absolute h-full w-full inset-0 top-0 left-0' >
             <Image
             src={`/works/${data.name}.webp`}
-            className='rounded-2xl object-cover object-top object-left'
+            className='rounded-2xl object-contain object-top bg-black'
             alt='test_image '
             fill
             />
