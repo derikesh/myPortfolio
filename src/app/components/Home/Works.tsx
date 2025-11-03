@@ -26,22 +26,20 @@ const WorkSection = () => {
       githubLink:'https://github.com/derikesh/gamit'
     },
     { 
+     name:'MyTube',
+     techUsed:['next','node','redis','docker','miniIO'],
+     description:'engineered the complete back-end for a YouTube-style video platform where users can sign in and upload content. To handle multiple simultaneous uploads, I designed a distributed processing pipeline using Docker. A resilient Redis job queue ensures that every video is reliably transcoded without failure. Finally, all media is kept secure in S3-compatible storage and delivered to the front-end via private, time-sensitive URLs.',
+     siteLink:'',
+     githubLink:'https://github.com/derikesh/youtube-skeleton-workers'
+
+    },
+    { 
      name:'Network Store',
      techUsed:['wordpress','bootstrap'],
      description:'A product showcase website built with WordPress, designed to display various items with clean layouts and easy navigation. Focused on presenting products effectively with customizable sections and a user-friendly browsing experience.',
      siteLink:'https://networkstore.com.np/',
      githubLink:null
     },
-
-    { 
-     name:'ESTORE',
-     techUsed:['react','mongodb','node'],
-     description:'Estore is a full-featured e-commerce platform built with a modern web stack, designed for seamless product browsing and user interaction. It includes product listing, detailed product pages, user authentication, and cart management, with a focus on clean UI and smooth performance. The system was structured for scalability, enabling easy integration of future payment gateways and order tracking features.',
-     siteLink:'https://estoreweb.vercel.app/',
-     githubLink:'https://github.com/derikesh/estore/'
-
-    },
-
   ]
 
     const works2:SINGLE_WORK_INTERFACE[] = [
@@ -53,6 +51,14 @@ const WorkSection = () => {
        githubLink:null
 
       },
+       { 
+     name:'ESTORE',
+     techUsed:['react','mongodb','node'],
+     description:'Estore is a full-featured e-commerce platform built with a modern web stack, designed for seamless product browsing and user interaction. It includes product listing, detailed product pages, user authentication, and cart management, with a focus on clean UI and smooth performance. The system was structured for scalability, enabling easy integration of future payment gateways and order tracking features.',
+     siteLink:'https://estoreweb.vercel.app/',
+     githubLink:'https://github.com/derikesh/estore/'
+
+    },
       { 
         name:'Portfolio',
         techUsed:['react','three','gsap','tailwind'],

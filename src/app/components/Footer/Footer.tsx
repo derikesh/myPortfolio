@@ -29,9 +29,6 @@ export default function Footer() {
               <a href='https://www.linkedin.com/in/rikesh-sherpa-4278a3223/' target='_blank' rel='noopener noreferrer' className='text-lg font-thin'>
                 <i className='text-[4vw] lg:text-[1.6vw] md:text-[1.8vw]'><FaLinkedin /></i>
               </a>
-              <a href='https://www.instagram.com/_rikesh_sherpa/' target='_blank' rel='noopener noreferrer' className='text-lg font-thin'>
-                <i className='text-[4vw] lg:text-[1.6vw] md:text-[1.8vw]'><FaInstagram /></i>
-              </a>
             </div>
           </div>
         </div>

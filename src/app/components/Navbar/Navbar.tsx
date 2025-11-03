@@ -29,7 +29,7 @@ const Navbar = () => {
 
                 <div className={`relative transition-all ease-out duration-500 ${ clicked ? '-translate-y-5 delay-300 ' : 'translate-y-5' }`}>
                     <div className="flex gap-4 " >
-                        <a href="https://www.instagram.com/_rikesh_sherpa/" target="_blank" rel="noopener noreferrer" className="sm:block hidden" >Instagram</a>
+                        {/* <a href="https://www.instagram.com/_rikesh_sherpa/" target="_blank" rel="noopener noreferrer" className="sm:block hidden" >Instagram</a> */}
                         <a href="https://www.linkedin.com/in/rikesh-sherpa-4278a3223/" target="_blank" rel="noopener noreferrer" className="sm:block hidden" >LinkedIn</a>
                         <span>Close</span>
                     </div>

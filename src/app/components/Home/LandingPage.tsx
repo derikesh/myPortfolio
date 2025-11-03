@@ -9,12 +9,12 @@ const LandingPage = () => {
         {/* Left Side - Content */}
         <div className="md:w-1/2 w-full">
           <h1 className="lg:text-[5.4vw] md:text-[7vw] text-[12vw] text-black font-karantina font-bold leading-[1.1] mb-6">
-            FRONTEND 
+            FULL STACK 
             <br />
             DEVELOPER
           </h1>
           <p className="text-gray-600 xl:text-[1.2vw] text-[4.4vw] mb-8 leading-relaxed">
-            With years of experience in building web apps, I turn concepts into fully functional systems. I love creating things that lives on the internet.
+            I build the powerful logic that drives your application and the beautiful interface that brings it to life.
           </p>
          <a href="mailto:rikeshsherpa1@gmail.com" className="w-fit block" >
            <Button>Contact Me</Button>
