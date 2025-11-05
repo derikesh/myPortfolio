@@ -105,7 +105,7 @@ const WorkSection = () => {
 
   return (
     <div className="relative bg-white">
-        <div className="work_content mx-4 py-[4vw] pt-[8vw]" >
+        <div className="work_content mx-4 py-[16vw] md:py-[4vw] " >
 
         <SectionTitle title="Works"/>
 

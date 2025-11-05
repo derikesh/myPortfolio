@@ -35,7 +35,7 @@ export default function Toggle() {
       <div className='w-full flex md:flex-row flex-col'>
 
         {/* content left */}
-        <div className='md:w-[40%] bg-gradient-to-r shadow-2xl from-teal-900 via-gray-800 to-slate-900 content_left border-[#d5fffb] border-[0.1vw] relative flex flex-col items-start justify-center px-[2.6vw] md:py-0 py-[28vw]'>
+        <div className='md:w-[40%] md:bg-gradient-to-r shadow-2xl from-teal-900 via-gray-800 to-slate-900 bg-slate-900 content_left border-[#d5fffb] border-[0.1vw] relative flex flex-col items-start justify-center px-[6vw] md:px-[2.6vw] md:py-0 py-[28vw]'>
           
           <div
             className={`absolute w-full h-full transition-opacity duration-500 ease-in-out flex flex-col items-start justify-center ${
@@ -69,8 +69,6 @@ export default function Toggle() {
         <div className='content_right md:w-[60%] relative'>
           <div className='grid md:grid-cols-3 grid-cols-2 h-full'>
             {activeTech?.map((item,index) => {
-
-                console.log('inside loop',index)
 
               return (
                  <div

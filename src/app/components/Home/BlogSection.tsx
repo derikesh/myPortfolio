@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function BlogSection() {
   return (
-    <section className="bg-white md:px-6 px-4 py-[8vw]">
+    <section className="bg-white md:px-6 px-4 py-[22vw] md:py-[8vw]">
       <div className="mx-auto w-full max-w-6xl">
         {/* Section Heading - left aligned to match request */}
         <h2 className="font-karantina text-black md:text-[3vw] text-[10vw] text-left">
@@ -10,7 +10,7 @@ export default function BlogSection() {
         </h2>
 
         {/* Optional intro text */}
-        <p className="font-grotesk text-black/80 md:text-[1.2vw] text-[4.6vw] md:w-[60%] w-[95%] text-left leading-relaxed my-[2vw]">
+        <p className="font-grotesk text-black/80 md:text-[1.2vw] text-[4.6vw] md:w-[60%] w-[95%] text-left leading-relaxed my-[6vw] md:my-[2vw]">
           Thoughts, lessons and small notes from my builds. Here’s the latest write‑up.
         </p>
 

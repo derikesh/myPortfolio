@@ -16,30 +16,30 @@ export default function BlogWIP({ params }: Props) {
       {/* Ensure we start from top on navigation */}
       <ScrollOnMountTop />
 
-      <h1 className="font-karantina text-black md:text-[4vw] text-[9vw] leading-none mb-[1.5vw]">
+      <h1 className="font-karantina text-black md:text-[4vw] text-[9vw] leading-none mb-[6vw] md:mb-[1.5vw]">
         {title}
       </h1>
   {/* Featured image (reused from home teaser) */}
-  <div className="w-full aspect-[16/9] bg-cover bg-center rounded-2xl mb-[2vw]" style={{ backgroundImage: `url('/works/blog1.jpg')` }} aria-hidden="true" />
+  <div className="w-full aspect-[16/9] bg-cover bg-center rounded-2xl my-[10vw] md:my-[2vw]" style={{ backgroundImage: `url('/works/blog1.jpg')` }} aria-hidden="true" />
 
-  <h2 className="font-karantina text-black md:text-[2.4vw] text-[7.5vw] mt-[2vw] mb-[1vw]">Introduction</h2>
+  <h2 className="font-karantina text-black md:text-[2.4vw] text-[7.5vw] mt-[4vw] mb-[3.5vw] md:mt-[2vw] md:mb-[1vw]">Introduction</h2>
 
-  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[2vw]">
+  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[4vw] md:mb-[2vw]">
         Ever wonder how YouTube and other media platforms handle multiple video uploads? Before
         beginning this project, I could not fathom the concept of allowing multiple users to upload
         at a time and have no server errors. Since JavaScript is a single threaded programming
-        language, it's hard to understand how it can achieve concurrency-like properties to allow for
+        language, it's hard to understand how it can achieve concurrency like properties to allow for
         multiple simultaneous uploads.
       </p>
 
-  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[2vw]">
-        In this post, we'll talk about the solution with a short YouTube-like architecture design for
+  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[4vw] md:mb-[2vw]">
+        In this post, we'll talk about the solution with a short YouTube like architecture design for
         handling multiple uploads.
       </p>
 
-  <h2 className="font-karantina text-black md:text-[2.4vw] text-[7.5vw] mt-[4vw] mb-[1vw]">Problem Statement</h2>
+  <h2 className="font-karantina text-black md:text-[2.4vw] text-[7.5vw] mt-[6vw] mb-[3.5vw] md:mt-[4vw] md:mb-[1vw]">Problem Statement</h2>
 
-  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[2vw]">
+  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[4vw] md:mb-[2vw]">
         We know that JavaScript is a single threaded language. A naive approach would be to create a
         single server with an API for the client to upload to, which the server then transcodes and
         saves into a database. But when two uploads come in at the same time, that server will make
@@ -48,38 +48,38 @@ export default function BlogWIP({ params }: Props) {
         architectural design.
       </p>
 
-  <h2 className="font-karantina text-black md:text-[2.4vw] text-[7.5vw] mt-[4vw] mb-[1vw]">The Solution</h2>
+  <h2 className="font-karantina text-black md:text-[2.4vw] text-[7.5vw] mt-[6vw] mb-[3.5vw] md:mt-[4vw] md:mb-[1vw]">The Solution</h2>
 
-  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[2vw]">
+  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[4vw] md:mb-[2vw]">
         The solution is broken down into two parts:
       </p>
 
-  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[1.5vw]"><strong>Part 1:</strong> A simple server API that only handles the initial request to upload. It
+  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[3.5vw] md:mb-[1.5vw]"><strong>Part 1:</strong> A simple server API that only handles the initial request to upload. It
         provides a signed URL so the upload happens directly from the client side.</p>
 
-  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[3vw]"><strong>Part 2:</strong> A separate server (or "worker") solely made for pulling the uploaded video from
-    the bucket, performing video <a href="https://ffmpeg.org/" target="_blank" rel="noopener noreferrer" className="underline">transcoding</a>, and storing the transcoded file back into a bucket.
+  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[4.5vw] md:mb-[3vw]"><strong>Part 2:</strong> A separate server (or "worker") solely made for pulling the uploaded video from
+    the bucket, performing video transcoding, and storing the transcoded file back into a bucket.
       </p>
 
-  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[2vw]">
+  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[4vw] md:mb-[2vw]">
         This concept all makes sense when we introduce containerized workers (Docker) and a message
-        queue (<a href="https://redis.io/docs/latest/rs/streams/" target="_blank" rel="noopener noreferrer" className="underline">Redis Streams</a>).
+        queue (Redis Streams).
       </p>
 
   <h2 className="font-karantina text-black md:text-[2.4vw] text-[7.5vw] mt-[4vw] mb-[1vw]">The Deep Dive: Data Pipeline and Architecture for Concurrency</h2>
 
-  <h3 className="font-karantina text-black md:text-[2.0vw] text-[6.8vw] mt-[3vw] mb-[1vw]">Step 1: The Secure Upload Handshake</h3>
+  <h3 className="font-karantina text-black md:text-[2.0vw] text-[6.8vw] mt-[5vw] mb-[2.5vw] md:mt-[3vw] md:mb-[1vw]">Step 1: The Secure Upload Handshake</h3>
 
-  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[2vw]">
+  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[4vw] md:mb-[2vw]">
         Firstly, we only allow authenticated users to upload, which includes a frontend configuration
-        that I'll be skipping for now. The user makes a request to the API to get a <a href="https://docs.min.io/docs/how-to-generate-presigned-url.html" target="_blank" rel="noopener noreferrer" className="underline">signed URL</a> for a
+        that I'll be skipping for now. The user makes a request to the API to get a signed URL for a
         direct upload from the client into a bucket (a MinIO bucket in my case). This allows our
         server to stay lightweight, as the intense upload is handled directly between the client and
         the bucket.
       </p>
 
       {/* Example server route that returns a presigned PUT URL for client uploads */}
-  <pre className="bg-black/90 rounded-md p-4 overflow-x-auto font-mono text-sm md:text-[0.95vw] text-[3.8vw] mb-[2vw] text-white/80">
+  <pre className="bg-black/90 rounded-md p-4 overflow-x-auto font-mono text-sm md:text-[0.95vw] text-[3.8vw] mb-[4vw] md:mb-[2vw] text-white/80">
   <code className="whitespace-pre">{`// router function to send signed url into frontend
 router.post('/get-signed-url', async (req,res)=>{   
   const fileName = \`video-\${Date.now()}.webm\`;
@@ -97,32 +97,32 @@ router.post('/get-signed-url', async (req,res)=>{
     }
 })`}</code></pre>
 
-  <h3 className="font-karantina text-black md:text-[2.0vw] text-[6.8vw] mt-[3vw] mb-[1vw]">Step 2: The Notification</h3>
+  <h3 className="font-karantina text-black md:text-[2.0vw] text-[6.8vw] mt-[5vw] mb-[2.5vw] md:mt-[3vw] md:mb-[1vw]">Step 2: The Notification</h3>
 
-  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[2vw]">
-        Using the same API server that was used to send the <a href="https://docs.min.io/docs/how-to-generate-presigned-url.html" target="_blank" rel="noopener noreferrer" className="underline">signed URL</a>, the client then sends another
+  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[4vw] md:mb-[2vw]">
+        Using the same API server that was used to send the signed URL, the client then sends another
         request after a successful upload. This is conditionally sent from the client to the server
-        with the name of the file in the request body. The server then pushes a message to a <a href="https://redis.io/docs/latest/rs/streams/" target="_blank" rel="noopener noreferrer" className="underline">Redis stream</a>
+        with the name of the file in the request body. The server then pushes a message to a Redis stream
         for its consumers to pick up.
       </p>
 
-        <pre className="bg-black/90 rounded-md p-4 overflow-x-auto font-mono text-sm md:text-[0.95vw] text-[3.8vw] mb-[2vw] text-white/80">
+    <pre className="bg-black/90 rounded-md p-4 overflow-x-auto font-mono text-sm md:text-[0.95vw] text-[3.8vw] mb-[4vw] md:mb-[2vw] text-white/80">
   <code className="whitespace-pre">{`     await client.xAdd('upload-stream', '*', {
         fileName,
         bucket:bucketName,
         status: 'pending',
       });`}</code></pre>
 
-  <h3 className="font-karantina text-black md:text-[2.0vw] text-[6.8vw] mt-[3vw] mb-[1vw]">Step 3: The Workers — Heart of the Operation</h3>
+  <h3 className="font-karantina text-black md:text-[2.0vw] text-[6.8vw] mt-[5vw] mb-[2.5vw] md:mt-[3vw] md:mb-[1vw]">Step 3: The Workers  Heart of the Operation</h3>
 
-  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[2vw]">
-        This worker server is containerized and keeps on listening for <a href="https://redis.io/docs/latest/rs/streams/" target="_blank" rel="noopener noreferrer" className="underline">Redis stream</a> messages. When the
+  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[4vw] md:mb-[2vw]">
+        This worker server is containerized and keeps on listening for Redis stream messages. When the
         server receives a message, it includes the filename to fetch and some other metadata. The
-        worker then loads the file from the bucket with that filename and begins <a href="https://ffmpeg.org/" target="_blank" rel="noopener noreferrer" className="underline">transcoding</a>. After
-        <a href="https://ffmpeg.org/" target="_blank" rel="noopener noreferrer" className="underline">transcoding</a>, it stores the new video and a thumbnail into two different buckets.
+        worker then loads the file from the bucket with that filename and begins transcoding. After
+        transcoding, it stores the new video and a thumbnail into two different buckets.
       </p>
 
-       <pre className="bg-black/90 rounded-md p-4 overflow-x-auto font-mono text-sm md:text-[0.95vw] text-[3.8vw] mb-[2vw] text-white/80">
+    <pre className="bg-black/90 rounded-md p-4 overflow-x-auto font-mono text-sm md:text-[0.95vw] text-[3.8vw] mb-[4vw] md:mb-[2vw] text-white/80">
   <code className="whitespace-pre">{`  
   //to listen for redis message 
   while(running){
@@ -136,37 +136,58 @@ router.post('/get-signed-url', async (req,res)=>{
       
       `}</code></pre>
 
-  <h2 className="font-karantina text-black md:text-[2.4vw] text-[7.5vw] mt-[4vw] mb-[1vw]">Horizontal Scaling</h2>
+      <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[2vw]" >
+        handle each request for transocding with limit of 3 at time (limiting prevents cpu intensive on higher upload numbers)
+      </p>
 
-  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[2vw]">
+       <pre className="bg-black/90 rounded-md p-4 overflow-x-auto font-mono text-sm md:text-[0.95vw] text-[3.8vw] mb-[2vw] text-white/80">
+  <code className="whitespace-pre">{`  
+    let limit = pLimit(3);
+        
+        const results = await Promise.allSettled( uploads[0].messages.map( (msg:RedisStreamMessage)=>{
+          return limit(()=>transcodingVideo(msg.message.fileName ,'transcoded/{cleanUpName(msg.message.fileName)}.webm',{ stream:'upload-stream',group:'upload-group',id:msg.id } ));
+        } ) )
+
+
+          results.forEach( (result,index)=>{
+            if(result.status =='rejected'){
+              const msg = uploads[0].messages[index];
+              console.log('failed to fetch on ',msg);
+            }
+        } )
+      `}</code></pre>
+
+  <h2 className="font-karantina text-black md:text-[2.4vw] text-[7.5vw] mt-[6vw] mb-[3.5vw] md:mt-[4vw] md:mb-[1vw]">Horizontal Scaling</h2>
+
+  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[4vw] md:mb-[2vw]">
         With the combination of Redis stream consumer groups and multiple instances of a worker, I can
         horizontally scale the service. If one user uploads, one worker can handle it. But if 100
         users upload, then I can increase the number of workers to 20 or more.
       </p>
 
-  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[2vw]">
+  <p className="font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[4vw] md:mb-[2vw]">
         Redis Streams helps in passing the stream messages to the different workers one by one. If 5
         users upload at a time and we have 5 workers, then each file message is sent to a different
         worker. If a 6th upload comes in, its message will wait in the stream until one of the
         workers finishes its current task and becomes available to process it.
       </p>
 
-  <h2 className="font-karantina text-black md:text-[2.4vw] text-[7.5vw] mt-[4vw] mb-[1vw]">Conclusion and Key Learnings</h2>
+  <h2 className="font-karantina text-black md:text-[2.4vw] text-[7.5vw] mt-[6vw] mb-[3.5vw] md:mt-[4vw] md:mb-[1vw]">Conclusion and Key Learnings</h2>
 
-  <p className="font-grotesk text-black/80 md:text-[1.05vw] text-[4.4vw] leading-relaxed mb-[2vw]">
+  <p className="font-grotesk text-black/80 md:text-[1.05vw] text-[4.4vw] leading-relaxed mb-[4vw] md:mb-[2vw]">
         The full project for this article including the API that returns signed URLs, the worker
         code that consumes Redis Streams is available on GitHub:
         <a href="https://github.com/derikesh/youtube-skeleton-workers" target="_blank" rel="noopener noreferrer" className="underline"> derikesh/youtube-skeleton-workers</a>.
   </p>
 
-  <ol className="list-decimal pl-6 font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[3vw]">
+  <ol className="list-decimal pl-6 font-grotesk text-black md:text-[1.2vw] text-[4.4vw] leading-relaxed mb-[4.5vw] md:mb-[3vw]">
         <li>How a lot of payload can be eliminated from the main server by using direct client to bucket uploads, saving server time and resources.</li>
         <li>The importance of decoupling a lightweight API from heavy tasks to allow for a smooth user experience.</li>
         <li>Using multiple workers with a message queue like Redis Streams (or any pub/sub service) allows us to handle intensive tasks separately from the main server, ensuring better task handling.</li>
         <li>How a child_process in Node.js can help with transcoding, allowing the main server process to work independently without being affected by a transcoding failure.</li>
       </ol>
 
-  <p className="font-grotesk text-black/70 md:text-[1.05vw] text-[4.4vw] leading-relaxed mt-[2vw] mb-[6vw]">
+  <p className="font-grotesk text-black/70 md:text-[1.05vw] text-[4.4vw] leading-relaxed mt-[2vw] mb-[8vw] md:mb-[6vw]">
         Note: The above architecture is best for learning and introducing the concept of multiple
         workers. It demonstrates the ground fundamentals of scaling software but is not a
         production grade design. It also has lots of edge cases that could be further handled, but
