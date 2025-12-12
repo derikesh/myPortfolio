@@ -18,7 +18,7 @@
     "framer-motion": "^12.23.0",
     "glider-js": "^1.7.9",
     "lodash": "^4.17.21",
-    "next": "15.3.4",
+    "next": "15.3.8",
     "next-themes": "^0.4.6",
     "postcss": "^8.5.6",
     "react": "^19.0.0",
